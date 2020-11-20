@@ -41,7 +41,7 @@ class Person:
         result = today.year - self.birthDate.year - ((today.month, today.day) < (self.birthDate.month, self.birthDate.day))
         return result
 
-    def editInfo(self, attributeName, newValue):
+    def edit_info(self, attributeName, newValue):
         """
         The function to edit attributes of the user.
 
