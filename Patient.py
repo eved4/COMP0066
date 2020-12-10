@@ -41,7 +41,7 @@ class Patient(Person):
         :param patientID: (int)
         :param medicalHistory: (MedicalInfo)
         """
-        super().__init__(userName, password, title, firstName, lastName, birthDate, gender, telephone, address)
+        Person.__init__(userName, password, title, firstName, lastName, birthDate, gender, telephone, address)
         self.patientID = patientID
         self.medicalHistory = medicalHistory
 

@@ -3,6 +3,7 @@
 
 import Patient
 import GP
+#import Database
 
 '''Retrieve patientID from Patient class and medicalWorkerID from GP class.'''
 
