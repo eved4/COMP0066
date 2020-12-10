@@ -1,7 +1,7 @@
 """
 placeholder
 """
-class MedicalInfo():
+class MedicalInfo:
     def __init__(self, information):
         self.information = information
 

@@ -1,6 +1,4 @@
-"""
-placeholder
-"""
+from reportlab.pdfgen import canvas
 
 class Prescription():
 
@@ -17,8 +15,8 @@ class Prescription():
 
         """
 
-        canvas = Canvas("Prescription.pdf")
-        canvas.setFont("Times-Roman", 12)
+        canvas1 = canvas.Canvas("Prescription.pdf")
+        canvas1.setFont("Times-Roman", 12)
 
         patient_name = input("Please enter patient name: ")
         patient_DOB = input("Please enter patient Date of Birth: ")
@@ -26,11 +24,11 @@ class Prescription():
         drug = input("Please enter the drug you are prescribing: ")
         dosage = input("Please enter the dosage: ")
 
-        canvas.drawString(72, 500, patient_name)
-        canvas.drawString(72, 430, patient_DOB)
-        canvas.drawString(72, 360, patient_symptoms)
-        canvas.drawString(72, 290, drug)
-        canvas.drawString(72, 220, dosage)
-        canvas.drawString(200, 150, "Please sign here: ")
+        canvas1.drawString(72, 500, patient_name)
+        canvas1.drawString(72, 430, patient_DOB)
+        canvas1.drawString(72, 360, patient_symptoms)
+        canvas1.drawString(72, 290, drug)
+        canvas1.drawString(72, 220, dosage)
+        canvas1.drawString(200, 150, "Please sign here: ")
 
-        canvas.save()
+        canvas1.save()

@@ -1,9 +1,5 @@
 
-"""
-placeholder
-"""
-
-class Calendar:
+class Calendar1:
     def __init__(self):
         self.schedule = {}
 

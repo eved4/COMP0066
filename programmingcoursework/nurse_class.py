@@ -1,15 +1,20 @@
-from sampleCal import Calendar
-from patient import Patient
+from programmingcoursework.sampleCal import Calendar1
+from programmingcoursework.medicalinfo import MedicalInfo
+from programmingcoursework.registration import Patient
 
-class Nurse():
+from Person import Person
 
-    def __init__(self, fName, lName, email, password):
 
+class Nurse(Person):
+
+    def __init__(self, fName, lName, email, password, userName, title, firstName, lastName, birthDate, gender,
+                 telephone, address):
+        super().__init__(userName, password, title, firstName, lastName, birthDate, gender, telephone, address)
         self.fName = fName
         self.lName = lName
         self.email = email
         self._password = password
-        self.cal = Calendar()
+        self.cal = Calendar1()
         self.appointments = []
         self.patients = []
         self.medical_info = {}
@@ -18,10 +23,10 @@ class Nurse():
         self.patients.append(patient)
 
     def add_medical_info(self, patient: Patient, information: MedicalInfo):
-        self.medical_info[patient.name] = information
+        self.medical_info[patient.userName] = information
 
     def update_information(self, patient: Patient, info: MedicalInfo):
-        self.medical_info[patient.name] = info
+        self.medical_info[patient.userName] = info
 
     def get_email(self):
         return self.email
@@ -43,6 +48,3 @@ class Nurse():
 
     def update_calendar_entry(self, date_time):
         return self.update_calendar_entry(date_time)
-
-
-
