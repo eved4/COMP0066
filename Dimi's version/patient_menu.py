@@ -42,11 +42,12 @@ def request_appointment(username):
     # Get the list of all users and loop through them
     users_list = unpickle_data("users_list.txt")
     for user in users_list:
-        # If the user is a GP, and is free at the specified time slot, offer the patient to book an appointment
+        # Check if the user is a GP and whether they're available at the specified date and time
         if users_list[user].role == 'gp':
             sch = users_list[user].cal.schedule
             available_slots = \
                 sch[(sch['Date'] == date) & (sch['Time'] == time) & (sch['Appointment'] == 0)][['Date', 'Time']]
+            # If the GP is available, offer the patient to book an appointment
             if not available_slots.empty:
                 print("We have found an available timeslot with Dr. {} {}:".format(users_list[user].firstName, users_list[user].lastName))
                 confirm = str(input("Would you like to request this appointment? (enter Y/N) "))

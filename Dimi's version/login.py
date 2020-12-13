@@ -106,5 +106,3 @@ def register_page(role):
         break
 
     print("Account {} has been registered successfully!".format(username))
-    #print("Redirecting back to home page...")
-    #time.sleep(2)

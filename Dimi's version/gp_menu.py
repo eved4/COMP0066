@@ -28,7 +28,7 @@ def gp_menu(username):
 def view_appointments(username):
     users_list = unpickle_data("users_list.txt")
     schedule = users_list[username].cal.schedule
-    print(schedule[schedule['Appointment'] == 0])
+    print(schedule[schedule['Appointment'] == 1])
 
 
 def adjust_availability(username):

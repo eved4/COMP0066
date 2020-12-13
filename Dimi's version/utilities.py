@@ -2,7 +2,9 @@ import pickle
 
 
 def unpickle_data(file_name):
-    # Load the list of patients from the pickled file; create and empty list if the pickled file is empty
+    """
+    Loads data from a pickled text file. Returns empty dictionary if the file is empty.
+    """
     infile = open(file_name, "rb")
     try:
         data = pickle.load(infile)
@@ -14,7 +16,9 @@ def unpickle_data(file_name):
 
 
 def pickle_data(file_name, data):
-    # Pickle the list of patients into a file
+    """
+    Pickles any data type into a text file.
+    """
     outfile = open(file_name, "wb")
     pickle.dump(data, outfile)
     outfile.close()

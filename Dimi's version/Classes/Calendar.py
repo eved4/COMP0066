@@ -41,6 +41,3 @@ class Calendar:
         self.schedule.loc[(self.schedule['Date'] == date) & (self.schedule['Time'] == time), ['Appointment']] = 0
         self.schedule.loc[(self.schedule['Date'] == date) & (self.schedule['Time'] == time), ['Patient username']] = ""
         self.schedule.loc[(self.schedule['Date'] == date) & (self.schedule['Time'] == time), ['Patient name']] = ""
-
-
-datetime.date(2020, 12, 1)

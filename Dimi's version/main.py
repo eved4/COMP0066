@@ -26,23 +26,21 @@ while True:
         time.sleep(1)
 
         if users_list[username].role == 'admin':
-            # admin menu
             admin_menu()
             continue
 
         elif users_list[username].role == 'gp':
-            # gp menu
             gp_menu(username)
             continue
 
         elif users_list[username].role == 'patient':
-            # patient menu
             patient_menu(username)
             continue
 
         break
 
     elif choice == "2":  # Register
+        # Only patients can register, GP's are added by admins
         register_page('patient')
         continue
 
